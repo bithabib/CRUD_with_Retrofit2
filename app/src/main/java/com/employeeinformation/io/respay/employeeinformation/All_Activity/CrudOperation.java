@@ -1,4 +1,4 @@
-package com.employeeinformation.io.respay.employeeinformation;
+package com.employeeinformation.io.respay.employeeinformation.All_Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,12 +7,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.employeeinformation.io.respay.employeeinformation.ApiClient;
+import com.employeeinformation.io.respay.employeeinformation.Employee;
+import com.employeeinformation.io.respay.employeeinformation.INetWorkService;
+import com.employeeinformation.io.respay.employeeinformation.R;
+
 import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity {
+public class CrudOperation extends AppCompatActivity {
 
     EditText name,type, id,address,date_of_joining;
     Button save,get,delete,update;
@@ -44,13 +50,13 @@ public class MainActivity extends AppCompatActivity {
                 call.enqueue(new Callback<Employee>() {
                     @Override
                     public void onResponse(Call<Employee> call, Response<Employee> response) {
-                        Toast.makeText(MainActivity.this, "response"+response.body().getStatus(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CrudOperation.this, "response"+response.body().getStatus(), Toast.LENGTH_LONG).show();
                     }
 
                     @Override
                     public void onFailure(Call<Employee> call, Throwable t) {
                         Log.i("Hello",""+t);
-                        Toast.makeText(MainActivity.this, "Throwable"+t, Toast.LENGTH_LONG).show();
+                        Toast.makeText(CrudOperation.this, "Throwable"+t, Toast.LENGTH_LONG).show();
                     }
                 });
             }
@@ -69,14 +75,14 @@ public class MainActivity extends AppCompatActivity {
 
                         for (int i = 0; i < employeeInformations.size(); i++) {
 
-                            Toast.makeText(MainActivity.this, employeeInformations.get(i).getName(),Toast.LENGTH_LONG).show();
+                            Toast.makeText(CrudOperation.this, employeeInformations.get(i).getName(),Toast.LENGTH_LONG).show();
                         }
                     }
 
                     @Override
                     public void onFailure(Call<List<Employee>> call, Throwable t) {
                         Log.i("Hello",""+t);
-                        Toast.makeText(MainActivity.this, "Throwable"+t, Toast.LENGTH_LONG).show();
+                        Toast.makeText(CrudOperation.this, "Throwable"+t, Toast.LENGTH_LONG).show();
                     }
                 });
             }
@@ -93,13 +99,13 @@ public class MainActivity extends AppCompatActivity {
                 call.enqueue(new Callback<Employee>() {
                     @Override
                     public void onResponse(Call<Employee> call, Response<Employee> response) {
-                        Toast.makeText(MainActivity.this, "response"+response.body().getStatus(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CrudOperation.this, "response"+response.body().getStatus(), Toast.LENGTH_LONG).show();
                     }
 
                     @Override
                     public void onFailure(Call<Employee> call, Throwable t) {
                         Log.i("Hello",""+t);
-                        Toast.makeText(MainActivity.this, "Throwable"+t, Toast.LENGTH_LONG).show();
+                        Toast.makeText(CrudOperation.this, "Throwable"+t, Toast.LENGTH_LONG).show();
                     }
                 });
             }
@@ -118,13 +124,13 @@ public class MainActivity extends AppCompatActivity {
                 call.enqueue(new Callback<Employee>() {
                     @Override
                     public void onResponse(Call<Employee> call, Response<Employee> response) {
-                        Toast.makeText(MainActivity.this, "response"+response.body().getStatus(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(CrudOperation.this, "response"+response.body().getStatus(), Toast.LENGTH_LONG).show();
                     }
 
                     @Override
                     public void onFailure(Call<Employee> call, Throwable t) {
                         Log.i("Hello",""+t);
-                        Toast.makeText(MainActivity.this, "Throwable"+t, Toast.LENGTH_LONG).show();
+                        Toast.makeText(CrudOperation.this, "Throwable"+t, Toast.LENGTH_LONG).show();
                     }
                 });
             }

@@ -72,24 +72,21 @@
         android:id="@+id/date_of_joining"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/date_of_joining"
+        android:layout_marginTop="20dp"
+        android:text="Click GET to get all information \n Inter only id for delete a specific row\nenter all the information to update it will update by id"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:weightSum="4"
+        android:weightSum="3"
         android:orientation="horizontal"
         >
-
-        <Button
-            android:id="@+id/save"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:text="save"
-
-            />
-
         <Button
             android:id="@+id/get"
             android:layout_width="0dp"
@@ -112,5 +109,6 @@
             android:text="update"
             />
     </LinearLayout>
+
 
 </RelativeLayout>

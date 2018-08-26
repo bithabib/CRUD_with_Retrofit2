@@ -12,7 +12,7 @@ import retrofit2.http.POST;
 public interface INetWorkService {
     @FormUrlEncoded
     @POST("/webapp/insert.php")
-    Call<Employee> insertData(@Field("name") String name, @Field("type") String type ,@Field("id") String id , @Field("address") String address , @Field("date_of_joining") String date_of_joining);
+    Call<Employee> insertData(@Field("name") String name, @Field("type") String type ,@Field("id") String id , @Field("address") String address , @Field("date_of_joining") String date_of_joining , @Field("password") String password);
 
     @GET("/webapp/get.php")
     Call<List<Employee>>getData();

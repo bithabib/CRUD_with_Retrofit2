@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.employeeinformation.io.respay.employeeinformation.All_Activity.LoginAndRegistration;
@@ -19,6 +20,8 @@ import butterknife.ButterKnife;
 public class LogIn extends Fragment {
     @BindView(R.id.link_to_register)
     TextView linkToRegister;
+    @BindView(R.id.btnLogin)
+    Button logIn;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -29,6 +32,12 @@ public class LogIn extends Fragment {
             public void onClick(View view) {
                 Fragment registration = new Registration();
                 ((LoginAndRegistration)getActivity()).addFragment(registration);
+            }
+        });
+        logIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
             }
         });
         return viewOfLogin;

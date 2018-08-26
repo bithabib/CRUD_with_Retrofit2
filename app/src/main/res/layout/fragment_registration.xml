@@ -47,7 +47,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="#372c24"
                 android:text="id"/>
-            <EditText android:id="@+id/reg_email"
+            <EditText android:id="@+id/id"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dip"

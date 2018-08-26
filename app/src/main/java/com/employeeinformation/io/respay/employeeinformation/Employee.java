@@ -7,6 +7,8 @@ import com.google.gson.annotations.SerializedName;
  */
 
 public class Employee {
+    @SerializedName("password")
+    String password;
     @SerializedName("success")
     private int status;
     @SerializedName("name")
@@ -65,6 +67,13 @@ public class Employee {
 
     public void setStatus(int status) {
         this.status = status;
+    }
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
 }
